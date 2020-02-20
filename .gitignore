@@ -1,0 +1,9 @@
+debug.log
+error_log
+*.swp
+**/*.swp
+logs
+.sass-cache
+.sass-cache/*
+css/*.map
+.DS_Store # OS X file
