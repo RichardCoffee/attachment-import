@@ -2,7 +2,7 @@
 /**
  *  Post Attachment Mods
  *
- * @package   AttachmentMods
+ * @package   attachment-import
  * @author    Richard Coffee <richard.coffee@gmail.com>
  * @copyright 2020 Richard Coffee
  * @license   GPLv2  <need uri here>
@@ -22,7 +22,7 @@
  * GitHub URI:        github uri needed if using plugin-update-checker
  * License:           GPLv2
  * License URI:       uri where license can be found and read
- * Text Domain:       attach-mods
+ * Text Domain:       rtc-attach-import
  * Domain Path:       /languages
  * Tags:              what, where, when, who, how, why
  */

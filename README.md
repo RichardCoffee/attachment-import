@@ -31,9 +31,9 @@ Don't install it either.
 
 ## FAQ
 
-Not one.  It would be rude of me to say 'Don't ask either', so I won't say it.  You can ask.  I might even answer.
+No, I don't think it does that.  Sorry :(
 
 ## Changelog
 
 ### 0.1.0
-* Initial write-up of core code.  Non-function right now, just takes up space.
+* Initial write-up of core code.  Non-functional right now, just takes up space.
