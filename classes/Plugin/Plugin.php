@@ -23,6 +23,13 @@ abstract class PAM_Plugin_Plugin {
 #	 * @since 20170111
 	public    $dbvers = '0';
 	/**
+	 *  Branch to be used in conjunction with https://github.com/YahnisElsts/plugin-update-checker
+	 *
+	 * @since 20200221
+	 * @var string
+	 */
+	protected $branch = 'master';
+	/**
 	 *  Github address used in conjunction with https://github.com/YahnisElsts/plugin-update-checker
 	 *
 	 * @since 20170325
@@ -225,7 +232,7 @@ abstract class PAM_Plugin_Plugin {
 	 * @param string File to look for.  Alter default as needed.
 	 * @return string Server file path.
 	 */
-	public function get_stylesheet( $file = 'css/attach-mods.css' ) {
+	public function get_stylesheet( $file = 'css/rtc-attach-mods.css' ) {
 		return $this->paths->get_plugin_file_path( $file );
 	}
 
@@ -247,7 +254,7 @@ abstract class PAM_Plugin_Plugin {
 			unset( $links['edit'] );
 			if ( is_plugin_active( $file ) && ! ( $this->tab === 'about' ) ) {
 				$url = ( $this->setting ) ? $this->setting : admin_url( 'admin.php?page=fluidity_options&tab=' . $this->tab );
-				$links['settings'] = sprintf( '<a href="%s"> %s </a>', esc_url( $url ), esc_html__( 'Settings', 'attach-mods' ) );
+				$links['settings'] = sprintf( '<a href="%s"> %s </a>', esc_url( $url ), esc_html__( 'Settings', 'rtc-attach-mods' ) );
 			}
 		}
 		return $links;
@@ -268,6 +275,7 @@ abstract class PAM_Plugin_Plugin {
 			if ( is_readable( $puc_file ) ) {
 				require_once( $puc_file );
 				$puc = Puc_v4_Factory::buildUpdateChecker( $this->github, $this->paths->file, $this->plugin );
+				$puc->setBranch( $this->branch );
 			}
 		}
 	}
