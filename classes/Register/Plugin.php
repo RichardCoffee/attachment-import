@@ -4,7 +4,7 @@ class PAM_Register_Plugin extends PAM_Register_Register {
 
 	public    static $option      = 'plugin';
 	private   static $versions    =  array();
-	protected static $plugin_file = 'attach-mods/attach-mods.php';
+	protected static $plugin_file = 'rtc-attach-import/rtc-attach-import.php';
 
 	protected static function activate_tasks() {
 		//  Example setup tasks
@@ -27,7 +27,7 @@ class PAM_Register_Plugin extends PAM_Register_Register {
 
 	private static function get_required_version( $request ) {
 		if ( empty( self::$versions ) ) {
-			static::$title = __( 'Plugin Name', 'attach-mods' );
+			static::$title = __( 'Plugin Name', 'rtc-attach-import' );
 			$file = WP_PLUGIN_DIR . '/' . self::$plugin_file;
 			$need = array(
 				'PHP' => 'Required PHP',

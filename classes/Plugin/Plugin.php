@@ -2,7 +2,7 @@
 /**
  *   Supplies basic plugin functions
  *
- * @package AttachmentMods
+ * @package AttachmentImport
  * @subpackage Plugin_Core
  * @since 20170111
  * @author Richard Coffee <richard.coffee@rtcenterprises.net>
@@ -232,7 +232,7 @@ abstract class PAM_Plugin_Plugin {
 	 * @param string File to look for.  Alter default as needed.
 	 * @return string Server file path.
 	 */
-	public function get_stylesheet( $file = 'css/rtc-attach-mods.css' ) {
+	public function get_stylesheet( $file = 'css/rtc-attach-import.css' ) {
 		return $this->paths->get_plugin_file_path( $file );
 	}
 
@@ -254,7 +254,7 @@ abstract class PAM_Plugin_Plugin {
 			unset( $links['edit'] );
 			if ( is_plugin_active( $file ) && ! ( $this->tab === 'about' ) ) {
 				$url = ( $this->setting ) ? $this->setting : admin_url( 'admin.php?page=fluidity_options&tab=' . $this->tab );
-				$links['settings'] = sprintf( '<a href="%s"> %s </a>', esc_url( $url ), esc_html__( 'Settings', 'rtc-attach-mods' ) );
+				$links['settings'] = sprintf( '<a href="%s"> %s </a>', esc_url( $url ), esc_html__( 'Settings', 'rtc-attach-import' ) );
 			}
 		}
 		return $links;
@@ -309,4 +309,10 @@ abstract class PAM_Plugin_Plugin {
   } //*/
 
 
+}
+
+if ( ! function_exists( 'is_url' ) ) {
+	function is_url( $url ) {
+		return filter_var( $url, FILTER_VALIDATE_URL );
+	}
 }

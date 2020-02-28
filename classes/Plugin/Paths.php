@@ -2,7 +2,7 @@
 /**
  *   Supplies basic plugin functions
  *
- * @package AttachmentMods
+ * @package AttachmentImport
  * @subpackage Plugin_Core
  * @since 20170113
  * @author Richard Coffee <richard.coffee@rtcenterprises.net>

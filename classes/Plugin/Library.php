@@ -2,7 +2,7 @@
 /**
  *  Provides library access to core trait functions.
  *
- * @package AttachmentMods
+ * @package AttachmentImport
  * @subpackage Plugin_Core
  * @since 20170503
  * @author Richard Coffee <richard.coffee@rtcenterprises.net>
