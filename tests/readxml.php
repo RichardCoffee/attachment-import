@@ -20,18 +20,19 @@ $mine = array_filter(
 	function( $a ) use ( $ids ) {
 #		if ( $a['post_type'] === 'attachment' ) return true;
 #		return false;
-		if ( ! ( strpos( $a['guid'], 'wpthemetestdata.wordpress.com' ) === false ) ) return false;
-		if ( ! ( strpos( $a['guid'], 'http://wptest.io/demo' ) === false ) ) return false;
-		if ( ! ( $a['post_type'] === 'post' ) ) return false;
-		if ( $a['post_type'] === 'attachment' ) return false;
-		if ( $a['post_type'] === 'forum' ) return false;
-		if ( $a['post_type'] === 'topic' ) return false;
-		if ( $a['post_type'] === 'nav_menu_item' ) return false;
-		if ( $a['post_type'] === 'page' ) return false;
-		return true;
+#		if ( ! ( strpos( $a['guid'], 'wpthemetestdata.wordpress.com' ) === false ) ) return false;
+#		if ( ! ( strpos( $a['guid'], 'http://wptest.io/demo' ) === false ) ) return false;
+#		if ( ! ( $a['post_type'] === 'post' ) ) return false;
+#		if ( $a['post_type'] === 'attachment' ) return false;
+#		if ( $a['post_type'] === 'forum' ) return false;
+#		if ( $a['post_type'] === 'topic' ) return false;
+#		if ( $a['post_type'] === 'nav_menu_item' ) return false;
+#		if ( $a['post_type'] === 'page' ) return false;
+#		return true;
 		if ( $a['post_type'] === 'attachment' ) {
 			if ( in_array( $a['post_id'], $ids ) ) return true;
 		}
+#		if ( $a['post_type'] === 'attachment' ) return true;
 		return false;
 	}
 );
